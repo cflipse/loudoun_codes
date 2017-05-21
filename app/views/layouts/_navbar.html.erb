@@ -11,9 +11,11 @@
       <li class='nav-item'>
         <%= link_to "Problems", problems_path, class: 'nav-link' %>
       </li>
+      <% if current_account && current_account.admin? %>
       <li class="nav-item">
         <%= link_to "Manage", admin_contest_path, class: 'nav-link' %>
       </li>
+      <% end %>
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>
       </li>
